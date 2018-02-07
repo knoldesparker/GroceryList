@@ -19,8 +19,9 @@ public class GroceryList {
         if (arrayLength < 11){
             System.out.println("Intast navn på vare:");
             inputNavn = scanner.nextLine();
+            /*
             groceryList[index] = 
-
+*/
 
         }
 

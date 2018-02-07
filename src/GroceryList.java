@@ -1,17 +1,31 @@
-import java.util.*;
+import java.util.Scanner;
+
 public class GroceryList {
    private String groceryName;
    private int groceryPrice;
    private int groceryAmount;
    private GroceryList[] groceryList;
+   private Scanner scanner = new Scanner(System.in);
 
 
     //This method will add items to the list if there is room
     private void addItem(){
-        int i = groceryList.length;
-        int n = ++i;
+        int arrayLength = groceryList.length;
+        int n = arrayLength++;
+        int index = 0;
+        String inputNavn;
+        int antal;
+
+        if (arrayLength < 11){
+            System.out.println("Intast navn på vare:");
+            inputNavn = scanner.nextLine();
+            groceryList[index] = 
+
+
+        }
 
     }
+
 
     public String getGroceryName() {
         return groceryName;

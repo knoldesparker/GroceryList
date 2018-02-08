@@ -19,7 +19,7 @@ public class READFILE {
                 String[] item = nextLine.split(";");
                 items.add(new GroceryItemOrder(item[0],
                         Double.parseDouble(item[1]),
-                        Integer.parseInt(item[0]))
+                        Integer.parseInt(item[2]))
                 );
             }
             scanner.close();

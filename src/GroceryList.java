@@ -4,7 +4,7 @@ import java.util.logging.FileHandler;
 
 public class GroceryList {
 
-
+    private ArrayList<GroceryItemOrder> inventoryItem;
     /*
     The GroceryList class should use an array to store the grocery item orders.
     Assume that a grocery list will have no more than 10 item orders.
@@ -14,15 +14,12 @@ public class GroceryList {
      */
     //Variables
     private final int START_CAPACITY = 10;
-    private GroceryItemOrder[] groceryItemOrders;
     private int pointer;
     private double totalCost;
-    private ArrayList<GroceryItemOrder> inventoryItems;
 
     //makes the array from the GroceryItemOrder Class
     public GroceryList (){
-        this.groceryItemOrders = new GroceryItemOrder[START_CAPACITY];
-        this.inventoryItems = readItemData();
+        this.inventoryItem = readItemData();
 
     }
     private ArrayList<GroceryItemOrder> readItemData()
@@ -31,23 +28,26 @@ public class GroceryList {
     }
 
     //This method will add items to the array w/ try/catch
-    public void addItem(GroceryItemOrder GIO){
+    public void displayList(){
        try {
-           groceryItemOrders[pointer] = GIO ;
-           pointer++;
+           for (int i = 0; i < this.inventoryItem.size(); i++)
+           {
+               System.out.println(i + ": " + this.inventoryItem.get(i));
+           }
        }
        //If no more room in the array, print out the error
        //Stops the program from crashing if addItem goes above the index
        catch (IndexOutOfBoundsException iOOBE){
            System.out.println("No more room in the list");
        }
-
+    }
+    public void addListItem(GroceryItemOrder itemOrder){
 
     }
 
     public double getTotalCost(){
        double value = 0.0;
-           for (GroceryItemOrder gio : groceryItemOrders) {
+           for (GroceryItemOrder gio : inventoryItem) {
                if (gio != null) {
                    value += gio.getCost();
                }
@@ -58,7 +58,7 @@ public class GroceryList {
     @Override
     public String toString() {
         return "GroceryList{" +
-                "groceryItemOrders=" + '\n' + Arrays.toString(groceryItemOrders) +
+                "inventoryItem=" + inventoryItem +
                 '}';
     }
 }

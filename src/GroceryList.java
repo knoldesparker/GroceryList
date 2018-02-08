@@ -21,7 +21,7 @@ public class GroceryList {
 
     }
 
-    //This method will add items to the array
+    //This method will add items to the array w/ try/catch
     public void addItem(GroceryItemOrder GIO){
        try {
            groceryItemOrders[pointer] = GIO;

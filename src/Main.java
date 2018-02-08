@@ -24,6 +24,18 @@ public class Main {
         gl.addItem(gil3);
         gl.addItem(gil4);
         gl.addItem(gil);
+        gl.addItem(gil);
+        gl.addItem(gil);
+        gl.addItem(gil);
+        gl.addItem(gil);
+        gl.addItem(gil);
+        gl.addItem(gil);
+        gl.addItem(gil);
+        gl.addItem(gil);
+        gl.addItem(gil);
+        gl.addItem(gil);
+        gl.addItem(gil);
+
         System.out.println(gl);
         System.out.println(gl.getTotalCost());
     }

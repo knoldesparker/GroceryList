@@ -21,23 +21,13 @@ public class GroceryItemOrder {
         return prize * amout;
     }
 
-    public String getName (){
-        return this.name;
-    }
-    public double getPrize(){
-        return this.prize;
-    }
-    public int getAmout(){
-        return this.amout;
-    }
-
     @Override
     public String toString() {
-        return "GroceryItemOrder{" +
-                "Name: " + name + '\'' +
-                ", Amout: " + amout +
-                ", Total cost: " + getCost() +
-                '}';
+        return
+                "Name: " + name + " " +
+                "Amout: " + amout + " " +
+                "Total cost: " + getCost() +
+                ']'+'\n';
     }
 }
 

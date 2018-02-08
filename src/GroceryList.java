@@ -9,20 +9,31 @@ public class GroceryList {
     and a getTotalCost-method that will return the total sum cost of all grocery item orders in this list.
     It should also have a toString-method.
      */
+    //Variables
     private final int START_CAPACITY = 10;
     private GroceryItemOrder[] groceryItemOrders;
     private int pointer;
     private double totalCost;
 
+    //makes the array from the GroceryItemOrder Class
     public GroceryList (){
         this.groceryItemOrders = new GroceryItemOrder[START_CAPACITY];
 
     }
 
-    //This method will add items to the list if there is room
+    //This method will add items to the array
     public void addItem(GroceryItemOrder GIO){
-        groceryItemOrders[pointer] = GIO;
-        pointer++;
+       try {
+           groceryItemOrders[pointer] = GIO;
+           pointer++;
+       }
+       //If no more room in the array, print out the error
+       //Stops the program from crashing if addItem goes above the index
+       catch (IndexOutOfBoundsException iOOBE){
+           System.out.println("No more room in the list");
+       }
+
+
     }
 
     public double getTotalCost(){
@@ -32,15 +43,13 @@ public class GroceryList {
                    value += gio.getCost();
                }
            }
-
-
         return value;
     }
 
     @Override
     public String toString() {
         return "GroceryList{" +
-                "groceryItemOrders=" + Arrays.toString(groceryItemOrders) +
+                "groceryItemOrders=" + '\n' + Arrays.toString(groceryItemOrders) +
                 '}';
     }
 }

@@ -1,6 +1,9 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.logging.FileHandler;
 
 public class GroceryList {
+
 
     /*
     The GroceryList class should use an array to store the grocery item orders.
@@ -14,17 +17,23 @@ public class GroceryList {
     private GroceryItemOrder[] groceryItemOrders;
     private int pointer;
     private double totalCost;
+    private ArrayList<GroceryItemOrder> inventoryItems;
 
     //makes the array from the GroceryItemOrder Class
     public GroceryList (){
         this.groceryItemOrders = new GroceryItemOrder[START_CAPACITY];
+        this.inventoryItems = readItemData();
 
+    }
+    private ArrayList<GroceryItemOrder> readItemData()
+    {
+        return new READFILE().readItemFile();
     }
 
     //This method will add items to the array w/ try/catch
     public void addItem(GroceryItemOrder GIO){
        try {
-           groceryItemOrders[pointer] = GIO;
+           groceryItemOrders[pointer] = GIO ;
            pointer++;
        }
        //If no more room in the array, print out the error

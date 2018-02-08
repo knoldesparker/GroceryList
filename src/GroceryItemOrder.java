@@ -4,9 +4,9 @@ and one only setting the name(the default quantity should be one).
 It should have a getCost-method returning the total cost of the item in its given quantity,
 and a toString-method returning a String with the name, quantity, and total cost. All fields should have getter and setter methods.
  */
+import java.io.Serializable;
 
-
-public class GroceryItemOrder {
+public class GroceryItemOrder implements Serializable {
     private String name;
     private double prize;
     private int amout;

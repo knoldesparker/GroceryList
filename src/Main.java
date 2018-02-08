@@ -10,31 +10,7 @@ public class Main {
      */
     public static void main(String[] args) {
         GroceryList gl = new GroceryList();
-        GroceryItemOrder gil = new GroceryItemOrder("Pasta", 18.5, 5);
-        GroceryItemOrder gil2 = new GroceryItemOrder("Tomat", 10.0, 2);
-        GroceryItemOrder gil3 = new GroceryItemOrder("Løg", 15, 1);
-        GroceryItemOrder gil4 = new GroceryItemOrder("Hvidløg", 10, 1);
 
-
-
-
-
-        gl.addItem(gil);
-        gl.addItem(gil2);
-        gl.addItem(gil3);
-        gl.addItem(gil4);
-        gl.addItem(gil);
-        gl.addItem(gil);
-        gl.addItem(gil);
-        gl.addItem(gil);
-        gl.addItem(gil);
-        gl.addItem(gil);
-        gl.addItem(gil);
-        gl.addItem(gil);
-        gl.addItem(gil);
-        gl.addItem(gil);
-        gl.addItem(gil);
-        gl.addItem(gil);
 
         System.out.println(gl);
         System.out.println(gl.getTotalCost());

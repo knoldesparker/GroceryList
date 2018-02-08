@@ -1,0 +1,4 @@
+Banana;5;5
+Apple;5;10
+Fritter;1;15
+Mayo;10;1
